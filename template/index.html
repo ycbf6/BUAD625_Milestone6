@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask URL Analyzer</title>
+</head>
+<body>
+    <h1>Flask URL Analyzer</h1>
+    <form action="/analyze" method="post">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Analyze</button>
+    </form>
+    <hr>
+    <h2>Analysis Result:</h2>
+    <div>
+        {% if result %}
+            <p>{{ result }}</p>
+            <a href="/download">Download Result</a>
+        {% else %}
+            <p>No result available yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
