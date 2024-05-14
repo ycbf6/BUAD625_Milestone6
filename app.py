@@ -49,8 +49,6 @@ accounts_list = file_names if file_names else None
 
 file_names_df = pd.DataFrame(file_names, columns=["custID"]).astype({"custID": "int64"}) if file_names else None
 
-# Drop the first row from the DataFrame if it exists
-file_names_df = file_names_df.drop(index=0) if file_names_df is not None else None
 
 
 
